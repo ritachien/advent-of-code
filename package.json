@@ -1,0 +1,14 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "My solutions for Advent of Code",
+  "main": "index.js",
+  "scripts": {
+    "test2022": "mocha ./2022/day-**/test.js"
+  },
+  "author": "Rita Chien <ritachien929@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^10.1.0"
+  }
+}
