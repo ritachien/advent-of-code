@@ -7,7 +7,7 @@ Every day for 25 days in December you have small programming challenges that you
 |  Day  |Part One|Part Two|
 |---|:--------:|:--------:|
 |Day 1: Calorie Counting|✔|✔|
-|Day 2: Rock Paper Scissors|✔||
+|Day 2: Rock Paper Scissors|✔|✔|
 |Day 3: to be Unlocked|||
 |Day 4: to be Unlocked|||
 |Day 5: to be Unlocked|||
