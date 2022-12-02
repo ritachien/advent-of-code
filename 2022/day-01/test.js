@@ -41,8 +41,6 @@ describe('# Day1 - Calorie Counting', function () {
     })
 
     it('should return 204837 with file input', function () {
-
-
       assert.strictEqual(part2(fileInput), 204837)
     })
   })
