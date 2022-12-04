@@ -16,8 +16,18 @@ function part1(input) {
 }
 
 function part2(input) {
+  return input.split(/\r?\n/).reduce((count, pair) => {
+    const [first, second] = pair.split(',')
+    const firstStart = Number(first.split('-')[0])
+    const firstEnd = Number(first.split('-')[1])
+    const secondStart = Number(second.split('-')[0])
+    const secondEnd = Number(second.split('-')[1])
 
-  return count
+    const overlapAtAll = !(firstEnd < secondStart || secondEnd < firstStart)
+
+    if (overlapAtAll) { count++ }
+    return count
+  }, 0)
 }
 
 module.exports = {

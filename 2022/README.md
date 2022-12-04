@@ -9,7 +9,7 @@ Every day for 25 days in December you have small programming challenges that you
 | Day 1: Calorie Counting        |    ✔     |    ✔     |
 | Day 2: Rock Paper Scissors     |    ✔     |    ✔     |
 | Day 3: Rucksack Reorganization |    ✔     |    ✔     |
-| Day 4: Camp Cleanup            |    ✔     |          |
+| Day 4: Camp Cleanup            |    ✔     |    ✔     |
 | Day 5: to be Unlocked          |          |          |
 | Day 6: to be Unlocked          |          |          |
 | Day 7: to be Unlocked          |          |          |

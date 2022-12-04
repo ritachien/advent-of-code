@@ -1,12 +1,12 @@
 /* 
  settings for daily tests
- import raw data from https://adventofcode.com/2022/day/4/input
+ fileInput = data from https://adventofcode.com/2022/day/4/input
 */
 const topic = '# Day 4: Camp Cleanup'
 const partOneRaw = 2
 const partOneFile = 471
-const partTwoRaw = 0
-const partTwoFile = 0
+const partTwoRaw = 4
+const partTwoFile = 888
 const rawInput =
   `2-4,6-8
 2-3,4-5
