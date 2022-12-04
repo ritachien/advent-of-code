@@ -1,7 +1,15 @@
+// settings for daily tests
+const topic = '# Day 3: Rucksack Reorganization'
+const partOneRaw = 157
+const partOneFile = 7903
+const partTwoRaw = 70
+const partTwoFile = 2548
+
+// tests
 const assert = require('assert')
 const { part1, part2 } = require('./main')
 
-// import raw data from https://adventofcode.com/2022/day/2/input
+// import raw data from https://adventofcode.com/2022/day/3/input
 const { readFileSync } = require('node:fs')
 const path = require('node:path')
 const file = path.join(__dirname + '/input.txt')
@@ -14,24 +22,24 @@ wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw`
 
-describe('# Day 3: Rucksack Reorganization', function () {
+describe(topic, function () {
   describe('@ part1', function () {
-    it('should return 157 with raw input', function () {
-      assert.strictEqual(part1(rawInput), 157)
+    it(`should return ${partOneRaw} with raw input`, function () {
+      assert.strictEqual(part1(rawInput), partOneRaw)
     })
 
-    it('should return 7903 with file input', function () {
-      assert.strictEqual(part1(fileInput), 7903)
+    it(`should return ${partOneFile} with file input`, function () {
+      assert.strictEqual(part1(fileInput), partOneFile)
     })
   })
 
   describe('@ part2', function () {
-    it('should return 12 with raw input', function () {
-      assert.strictEqual(part2(rawInput), 12)
+    it(`should return ${partTwoRaw} with raw input`, function () {
+      assert.strictEqual(part2(rawInput), partTwoRaw)
     })
 
-    it('should return 13071 with file input', function () {
-      assert.strictEqual(part2(fileInput), 13071)
+    it(`should return ${partTwoFile} with file input`, function () {
+      assert.strictEqual(part2(fileInput), partTwoFile)
     })
   })
 })
