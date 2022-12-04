@@ -1,24 +1,24 @@
-function part1(input) {
-  // separate every line from input
-  const rucksack = input.split(/\r?\n/)
-  const numArray = rucksack.map(rucksack => {
-    const middleIndex = rucksack.length / 2
-    const front = rucksack.slice(0, middleIndex)
-    const back = rucksack.slice(middleIndex)
+// create priority map of characters
+const priorityMap = {}
+for (const x of Array(26).keys()) {
+  // a ~ z represent 1~ 26
+  priorityMap[String.fromCharCode('a'.charCodeAt(0) + x)] = x + 1
+  // A ~ Z represent 1~ 26
+  priorityMap[String.fromCharCode('A'.charCodeAt(0) + x)] = x + 27
+}
 
-    let num = 0
-    for (let char of front) {
-      if (back.includes(char)) {
-        // convert from Unicode code points
-        const charCode = char.charCodeAt()
-        if (charCode >= 65 && charCode <= 90) return num = charCode - 38
-        if (charCode >= 97 && charCode <= 122) return num = charCode - 96
-      }
+function part1(input) {
+  const prioritySum = input.split(/\r?\n/).reduce((sum, rucksack) => {
+    const middleIndex = rucksack.length / 2
+    const front = rucksack.substring(0, middleIndex)
+    const back = rucksack.substring(middleIndex)
+
+    for (const char of front) {
+      if (back.includes(char)) return sum += priorityMap[char]
     }
-    return num
-  })
-  // sum all numbers in array
-  return numArray.reduce((acc, cur) => acc + cur, 0)
+    return sum
+  }, 0)
+  return prioritySum
 }
 
 function part2(input) {
