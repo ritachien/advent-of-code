@@ -5,8 +5,8 @@
 const topic = '# Day 5: Supply Stacks'
 const partOneRaw = 'CMZ'
 const partOneFile = 'FJSRQCFTN'
-const partTwoRaw = 0
-const partTwoFile = 0
+const partTwoRaw = 'MCD'
+const partTwoFile = 'CJVLJQPHS'
 const rawInput =
   `    [D]    
 [N] [C]    
@@ -39,14 +39,14 @@ describe(topic, function () {
     })
   })
 
-  // describe('@ part2', function () {
-  //   it(`should return ${partTwoRaw} with raw input`, function () {
-  //     assert.strictEqual(part2(rawInput), partTwoRaw)
-  //   })
+  describe('@ part2', function () {
+    it(`should return ${partTwoRaw} with raw input`, function () {
+      assert.strictEqual(part2(rawInput), partTwoRaw)
+    })
 
-  //   it(`should return ${partTwoFile} with file input`, function () {
-  //     assert.strictEqual(part2(fileInput), partTwoFile)
-  //   })
-  // })
+    it(`should return ${partTwoFile} with file input`, function () {
+      assert.strictEqual(part2(fileInput), partTwoFile)
+    })
+  })
 })
 

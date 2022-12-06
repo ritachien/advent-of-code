@@ -1,5 +1,5 @@
-function part1(input) {
-  const [stackPart, instructionPart] = input.split(/\r?\n\r?\n/)
+function parsedRawData(raw) {
+  const [stackPart, instructionPart] = raw.split(/\r?\n\r?\n/)
   const stackMatrix = stackPart
     .split(/\r?\n/)
     .map(row => {
@@ -21,12 +21,24 @@ function part1(input) {
     }
   }
 
-  const moves = instructionPart.split(/\r?\n/)
-  moves.map(row => {
-    const movedNum = Number(row.split(' ')[1])
-    const moveFromIndex = Number(row.split(' ')[3])
-    const moveToIndex = Number(row.split(' ')[5])
+  const moves = []
+  instructionPart
+    .split(/\r?\n/)
+    .map(row => {
+      const movedNum = Number(row.split(' ')[1])
+      const moveFromIndex = Number(row.split(' ')[3])
+      const moveToIndex = Number(row.split(' ')[5])
+      moves.push([movedNum, moveFromIndex, moveToIndex])
+    })
 
+  return [stacks, stackNames, moves]
+}
+
+function part1(input) {
+  [stacks, stackNames, moves] = parsedRawData(input)
+
+  moves.map(move => {
+    const [movedNum, moveFromIndex, moveToIndex] = move
     const cratesMoved = stacks[moveFromIndex].splice(-movedNum)
     stacks[moveToIndex].push(...cratesMoved.reverse())
   })
@@ -39,7 +51,19 @@ function part1(input) {
 }
 
 function part2(input) {
-  return
+  [stacks, stackNames, moves] = parsedRawData(input)
+
+  moves.map(move => {
+    const [movedNum, moveFromIndex, moveToIndex] = move
+    const cratesMoved = stacks[moveFromIndex].splice(-movedNum)
+    stacks[moveToIndex].push(...cratesMoved)
+  })
+
+  let tops = ''
+  for (let i = 1; i <= stackNames.length; i++) {
+    tops += stacks[i].pop()
+  }
+  return tops
 }
 
 module.exports = {
