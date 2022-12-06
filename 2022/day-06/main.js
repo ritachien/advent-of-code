@@ -20,8 +20,24 @@ function part1(input) {
 }
 
 function part2(input) {
+  let marker = 0
+  let visited = ''
 
-  return
+  for (let i = 0; i < input.length - 14; i++) {
+    // reset visited to ''
+    visited = ''
+    // check duplicated char by char
+    for (let j = i; j <= input.length; j++) {
+      if (visited.includes(input[j])) {
+        break
+      } else {
+        visited += input[j]
+      }
+
+      if (visited.length === 14) return marker = j + 1
+    }
+  }
+  return marker
 }
 
 module.exports = {

@@ -5,10 +5,19 @@
 const topic = '# Day 6: Tuning Trouble'
 const partOneRaw = 5
 const partOneFile = 1578
-const partTwoRaw = ''
-const partTwoFile = ''
-const rawInput = 'bvwbjplbgvbhsrlpgdmjqwftvncz'
+const partTwoRaw = 19
+const partTwoFile = 2178
 
+const rawInput1_1 = 'bvwbjplbgvbhsrlpgdmjqwftvncz'
+const rawInput1_2 = 'nppdvjthqldpwncqszvftbrmjlhg'
+const rawInput1_3 = 'nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg'
+const rawInput1_4 = 'zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw'
+
+const rawInput2_1 = 'mjqjpqmgbljsphdztnvjfqwrcgsmlb'
+const rawInput2_2 = 'bvwbjplbgvbhsrlpgdmjqwftvncz'
+const rawInput2_3 = 'nppdvjthqldpwncqszvftbrmjlhg'
+const rawInput2_4 = 'nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg'
+const rawInput2_5 = 'zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw'
 
 // tests
 const assert = require('assert')
@@ -23,22 +32,49 @@ const fileInput = readFileSync(file, 'utf8')
 describe(topic, function () {
   describe('@ part1', function () {
     it(`should return ${partOneRaw} with raw input`, function () {
-      assert.strictEqual(part1(rawInput), partOneRaw)
+      assert.strictEqual(part1(rawInput1_1), partOneRaw)
     })
 
+    it(`should return 6 with raw input`, function () {
+      assert.strictEqual(part1(rawInput1_2), 6)
+    })
+
+    it(`should return 10 with raw input`, function () {
+      assert.strictEqual(part1(rawInput1_3), 10)
+    })
+
+    it(`should return 11 with raw input`, function () {
+      assert.strictEqual(part1(rawInput1_4), 11)
+    })
     it(`should return ${partOneFile} with file input`, function () {
       assert.strictEqual(part1(fileInput), partOneFile)
     })
   })
 
-  // describe('@ part2', function () {
-  //   it(`should return ${partTwoRaw} with raw input`, function () {
-  //     assert.strictEqual(part2(rawInput), partTwoRaw)
-  //   })
+  describe('@ part2', function () {
+    it(`should return ${partTwoRaw} with raw input`, function () {
+      assert.strictEqual(part2(rawInput2_1), partTwoRaw)
+    })
 
-  //   it(`should return ${partTwoFile} with file input`, function () {
-  //     assert.strictEqual(part2(fileInput), partTwoFile)
-  //   })
-  // })
+    it(`should return 23 with raw input`, function () {
+      assert.strictEqual(part2(rawInput2_2), 23)
+    })
+
+    it(`should return 23 with raw input`, function () {
+      assert.strictEqual(part2(rawInput2_3), 23)
+    })
+
+    it(`should return 29 with raw input`, function () {
+      assert.strictEqual(part2(rawInput2_4), 29)
+    })
+
+    it(`should return 26 with raw input`, function () {
+      assert.strictEqual(part2(rawInput2_5), 26)
+    })
+
+    it(`should return ${partTwoFile} with file input`, function () {
+      assert.strictEqual(part2(fileInput), partTwoFile)
+    })
+  })
 })
 

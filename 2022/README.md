@@ -11,7 +11,7 @@ Every day for 25 days in December you have small programming challenges that you
 | Day 3: Rucksack Reorganization |    ✔     |    ✔     |
 | Day 4: Camp Cleanup            |    ✔     |    ✔     |
 | Day 5: Supply Stacks           |    ✔     |    ✔     |
-| Day 6: Tuning Trouble          |    ✔     |          |
+| Day 6: Tuning Trouble          |    ✔     |    ✔     |
 | Day 7: to be Unlocked          |          |          |
 | Day 8: to be Unlocked          |          |          |
 | Day 9: to be Unlocked          |          |          |
