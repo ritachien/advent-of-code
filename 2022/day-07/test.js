@@ -5,8 +5,8 @@
 const topic = '# Day 7: No Space Left On Device'
 const partOneRaw = 95437
 const partOneFile = 1490523
-const partTwoRaw = ''
-const partTwoFile = ''
+const partTwoRaw = 24933642
+const partTwoFile = 12390492
 const rawInput =
   `$ cd /
 $ ls
@@ -53,14 +53,14 @@ describe(topic, function () {
     })
   })
 
-  // describe('@ part2', function () {
-  //   it(`should return ${partTwoRaw} with raw input`, function () {
-  //     assert.strictEqual(part2(rawInput), partTwoRaw)
-  //   })
+  describe('@ part2', function () {
+    it(`should return ${partTwoRaw} with raw input`, function () {
+      assert.strictEqual(part2(rawInput), partTwoRaw)
+    })
 
-  //   it(`should return ${partTwoFile} with file input`, function () {
-  //     assert.strictEqual(part2(fileInput), partTwoFile)
-  //   })
-  // })
+    it(`should return ${partTwoFile} with file input`, function () {
+      assert.strictEqual(part2(fileInput), partTwoFile)
+    })
+  })
 })
 

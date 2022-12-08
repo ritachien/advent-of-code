@@ -54,6 +54,7 @@ function analyzeLines(lines) {
 }
 
 function updateDirSize(dir, size) {
+  // update every parent directory size
   if (dir.parent !== null) {
     updateDirSize(dir.parent, size)
   }
@@ -68,13 +69,29 @@ function getTotalSize(outerDir, maxSize) {
   return totalSize
 }
 
+function findEnoughSpace(directory, requireSize) {
+  let minSize = directory.size >= requireSize ? directory.size : 0
+  directory.dirs.forEach(dir => {
+    const size = findEnoughSpace(dir, requireSize)
+    if (size !== 0 && size < minSize) minSize = size
+  })
+  return minSize
+}
+
 function part1(input) {
   const root = analyzeLines(input.split(/\r?\n/))
   return getTotalSize(root, 100000)
 }
 
 function part2(input) {
+  // find required space
+  const root = analyzeLines(input.split(/\r?\n/))
+  const filesystemSize = 70000000
+  const spaceForUpdate = 30000000
+  const spaceRequired = spaceForUpdate - (filesystemSize - root.size)
 
+  // find min directory for require space
+  return findEnoughSpace(root, spaceRequired)
 }
 
 

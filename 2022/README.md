@@ -12,7 +12,7 @@ Every day for 25 days in December you have small programming challenges that you
 | Day 4: Camp Cleanup            |    ✔     |    ✔     |
 | Day 5: Supply Stacks           |    ✔     |    ✔     |
 | Day 6: Tuning Trouble          |    ✔     |    ✔     |
-| Day 7: No Space Left On Device |    ✔     |          |
+| Day 7: No Space Left On Device |    ✔     |    ✔     |
 | Day 8: to be Unlocked          |          |          |
 | Day 9: to be Unlocked          |          |          |
 | Day 10: to be Unlocked         |          |          |
